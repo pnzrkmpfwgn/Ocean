@@ -1,0 +1,18 @@
+/*text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+    #2dd5ff 0px 0px 20px, #2dd5ff 0px 0px 30px, #2dd5ff 0px 0px 40px,
+    #2dd5ff 0px 0px 50px, #2dd5ff 0px 0px 75px;*/
+* {
+  word-spacing: 4px;
+  position: relative;
+}
+body {
+  background: linear-gradient(rgba(49, 141, 202, 0.5), rgba(33, 35, 121, 0.72));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.test {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}

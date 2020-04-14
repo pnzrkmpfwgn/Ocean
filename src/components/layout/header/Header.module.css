@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  margin: 10px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+.heading {
+  color: rgb(37, 117, 170);
+  font-size: 48px;
+  text-shadow: 2px 0 #222;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Pacifico', cursive;
+}

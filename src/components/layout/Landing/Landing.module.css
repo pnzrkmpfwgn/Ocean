@@ -1,0 +1,44 @@
+.container {
+  margin-top: 75px;
+  margin-bottom: 100px;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading {
+  grid-area: header;
+  text-shadow: 0, 2px #222;
+  color: rgb(15, 88, 136);
+  margin: 10px;
+  font-size: 45px;
+  align-items: center;
+  font-style: italic;
+}
+.btn1,
+.btn2 {
+  border: 5px solid rgb(8, 57, 90);
+  background-color: rgb(8, 57, 90);
+  color: rgb(20, 164, 231);
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+}
+.btn1:hover,
+.btn2:hover {
+  background-color: rgb(20, 164, 231);
+  color: rgb(8, 57, 90);
+  width: 52%;
+  font-size: 22px;
+}
+
+.heading2 {
+  grid-area: content;
+  color: rgb(15, 88, 136);
+  margin: 18px;
+  font-size: 23px;
+  text-align: center;
+}

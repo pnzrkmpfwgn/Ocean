@@ -1,0 +1,17 @@
+.container {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: 'Pacifico', cursive;
+}
+.paragraph {
+  color: rgb(15, 72, 110);
+  font-size: 21px;
+}
+.heading {
+  color: rgb(15, 72, 110);
+  font-size: 26px;
+}
+.img {
+  width: 75px;
+  height: 75px;
+}

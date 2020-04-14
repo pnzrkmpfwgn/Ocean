@@ -1,0 +1,17 @@
+.container {
+  font-family: 'Pacifico', cursive;
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: center;
+  text-shadow: 0, 2px #222;
+  color: rgb(15, 72, 110);
+  height: '70vh';
+}
+.H1 {
+  font-size: 28px;
+}
+
+.list {
+  margin-top: 10px;
+  font-size: 24px;
+}

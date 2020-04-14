@@ -1,0 +1,36 @@
+.container {
+  font-family: 'Pacifico', cursive;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.Img {
+  margin-left: 20px;
+}
+
+.H1 {
+  text-shadow: 0, 2px #222;
+  color: rgb(15, 72, 110);
+  font-size: 28px;
+}
+
+.H3 {
+  text-shadow: 0, 2px #222;
+  color: rgb(15, 72, 110);
+  font-size: 22px;
+}
+.H4 {
+  text-shadow: 0, 2px #222;
+  color: rgb(15, 72, 110);
+  font-size: 22px;
+}
+P {
+  color: rgb(15, 72, 110);
+  font-size: 21px;
+}
+
+.Span {
+  color: rgb(12, 54, 83);
+  font-weight: bold;
+  font-style: italic;
+}
