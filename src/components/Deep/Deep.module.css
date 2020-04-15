@@ -1,0 +1,27 @@
+.background {
+  background: linear-gradient(rgba(61, 182, 253, 0.5), rgba(0, 0, 0));
+  background-repeat: no-repeat;
+
+  height: 2000px;
+}
+
+.start {
+  background-image: url(../../Assets/water6.png);
+
+  height: 100px;
+  width: 100%;
+}
+
+.H1 {
+  font-family: 'Press Start 2P', cursive;
+
+  margin-right: 5px;
+  text-align: center;
+}
+
+.submarineFeatures {
+  height: 125px;
+  width: 125px;
+  margin: 25px;
+  transform: rotate(30deg);
+}

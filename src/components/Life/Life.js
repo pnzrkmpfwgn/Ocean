@@ -5,10 +5,16 @@ import img from '../../Assets/Astro-naut.jpg';
 import img2 from '../../Assets/Submarine.png';
 import classes from './Life.module.css';
 
+// Configuration for submarine's animation
 const Config = {friction: 5, tension: 120, mass: 140};
 function Life() {
+  // Custom hook for user's viewport
   const [ref, visible] = useOnScreen({rootMargin: '-100px'});
+
+  //State for Astro-naut's rotation animation
   const [state, setState] = useState(false);
+
+  // Animations
   const anim = useSpring({
     from: {opacity: 0, transform: 'translate3d(-75px,0,0)'},
     to: async (next) => {
@@ -43,8 +49,12 @@ function Life() {
   });
   const anim4 = useSpring({
     from: {transform: 'translate3d(0,20px,0)'},
-    to: {
-      transform: 'translate3d(0,10px,0)',
+    to: async (next) => {
+      if (visible) {
+        await next({
+          transform: 'translate3d(0,10px,0)',
+        });
+      }
     },
     config: Config,
   });
@@ -66,7 +76,6 @@ function Life() {
           <animated.img
             style={anim2}
             onClick={() => {
-              console.log(state);
               setState(!state);
             }}
             className={classes.img}
@@ -84,7 +93,6 @@ function Life() {
         </animated.div>
 
         <animated.img
-          repeat='true'
           style={anim4}
           className={classes.submarine}
           src={img2}

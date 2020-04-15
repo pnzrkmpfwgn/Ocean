@@ -3,17 +3,19 @@ import {useSpring, animated, config} from 'react-spring';
 import logo from '../../../Assets/Logo.png';
 import classes from './Header.module.css';
 const Header = () => {
+  //Animations has no chaining or visibility oberservation they are obligated to play out
+  //as soon as website loaded.
   const anim1 = useSpring({
     from: {opacity: 0, marginLeft: -50},
     to: {opacity: 1, marginLeft: 0},
     config: config.gentle,
-    delay: 800
+    delay: 800,
   });
   const anim2 = useSpring({
     from: {opacity: 0, transform: 'translate3d(40px,0,0)'},
     to: {opacity: 1, transform: 'translate3d(0px,0,0)'},
     config: config.gentle,
-    delay: 1100
+    delay: 1100,
   });
   return (
     <Fragment>

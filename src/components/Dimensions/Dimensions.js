@@ -3,14 +3,17 @@ import {useSpring, animated, config} from 'react-spring';
 import sailBoat from '../../Assets/sailboat.png';
 import classes from '../Origin/Origin.module.css';
 import useOnScreen from '../../utils/useOnScreen';
+
 function Dimensions() {
+  //Custom hook for intersection observer
   const [ref, visible] = useOnScreen({rootMargin: '-100px'});
 
+  //Animations
   const anim1 = useSpring({
     from: {opacity: 1, transform: 'translate3d(-110px,0,0)'},
     to: async (next, cancel) => {
       if (visible) {
-        await next({opacity: 0, transform: 'translate3d(395px,0,0)'});
+        await next({opacity: 0, transform: 'translate3d(300px,0,0)'});
       }
     },
     config: {duration: 28000},

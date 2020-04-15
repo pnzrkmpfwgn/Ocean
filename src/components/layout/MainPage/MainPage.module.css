@@ -1,0 +1,6 @@
+.background {
+  background: linear-gradient(rgba(49, 141, 202, 0.5), rgba(33, 35, 121, 0.72));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 10px;
+}

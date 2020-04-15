@@ -23,7 +23,7 @@ function Etymology() {
       }
     },
     from: {opacity: 0, transform: 'translate3d(0,30px,0)'},
-    delay: 2500,
+    delay: 1100,
     config: config.slow,
   });
   const anim3 = useSpring({
@@ -33,7 +33,7 @@ function Etymology() {
       }
     },
     from: {opacity: 0, transform: 'translate3d(0,30px,0)'},
-    delay: 4000,
+    delay: 1300,
     config: config.slow,
   });
   let section = (
