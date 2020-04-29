@@ -15,3 +15,17 @@
   margin-top: 10px;
   font-size: 24px;
 }
+
+@media (min-width: 1024px) {
+  .container {
+    margin-left: 100px;
+    width: 80%;
+  }
+  .H1 {
+    font-size: 35px;
+  }
+
+  .list {
+    font-size: 30px;
+  }
+}

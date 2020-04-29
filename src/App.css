@@ -2,8 +2,15 @@
     #2dd5ff 0px 0px 20px, #2dd5ff 0px 0px 30px, #2dd5ff 0px 0px 40px,
     #2dd5ff 0px 0px 50px, #2dd5ff 0px 0px 75px;*/
 * {
+  margin: 0;
   word-spacing: 4px;
   position: relative;
+}
+img {
+  width: 100px;
+  height: 100px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 
 .test {

@@ -10,8 +10,22 @@
 .heading {
   color: rgb(15, 72, 110);
   font-size: 26px;
+  text-decoration: underline;
 }
 .img {
   width: 75px;
   height: 75px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-left: 100px;
+    width: 80%;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .paragraph {
+    font-size: 30px;
+  }
 }

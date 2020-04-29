@@ -12,6 +12,7 @@
   text-shadow: 0, 2px #222;
   color: rgb(15, 72, 110);
   font-size: 28px;
+  text-decoration: underline;
 }
 
 .H3 {
@@ -33,4 +34,24 @@ P {
   color: rgb(12, 54, 83);
   font-weight: bold;
   font-style: italic;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin-left: 100px;
+    width: 80%;
+    margin-top: 100px;
+  }
+  .H1 {
+    font-size: 40px;
+  }
+  .H3 {
+    font-size: 32px;
+  }
+  .H4 {
+    font-size: 28px;
+  }
+  .P {
+    font-size: 30px;
+  }
 }

@@ -3,36 +3,39 @@ import Wave from '../../Assets/Wave.png';
 import classes from './Origin.module.css';
 import {useSpring, animated, config} from 'react-spring';
 import useOnScreen from '../../utils/useOnScreen';
-function Origin() {
+function Origin(props) {
   const [ref, visible] = useOnScreen({rootMargin: '-100px'});
   const anim1 = useSpring({
     from: {transform: 'translate3d(-135px,0,0)'},
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (visible) {
         await next({transform: 'translate3d(0px,0,0)'});
       }
     },
     config: config.wobbly,
+    immediate: props.animation,
   });
   const anim2 = useSpring({
     from: {opacity: 0, transform: 'translate3d(0,-25px,0)'},
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (visible) {
         await next({opacity: 1, transform: 'translate3d(0,0px,0)'});
       }
     },
     delay: 800,
     config: config.wobbly,
+    immediate: props.animation,
   });
   const anim3 = useSpring({
     from: {opacity: 0},
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (visible) {
         await next({opacity: 1});
       }
     },
     delay: 1500,
     config: config.slow,
+    immediate: props.animation,
   });
 
   return (

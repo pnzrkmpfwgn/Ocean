@@ -3,12 +3,6 @@
   margin: 10px;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-}
 .heading {
   color: rgb(37, 117, 170);
   font-size: 48px;
@@ -17,4 +11,13 @@ img {
   top: 0;
   right: 0;
   font-family: 'Pacifico', cursive;
+}
+
+@media (min-width: 1024px) {
+  .img {
+    margin-left: 35px;
+  }
+  .heading {
+    margin-right: 35px;
+  }
 }

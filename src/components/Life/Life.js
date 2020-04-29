@@ -5,14 +5,20 @@ import img from '../../Assets/Astro-naut.jpg';
 import img2 from '../../Assets/Submarine.png';
 import classes from './Life.module.css';
 
+//React-router-dom
+import {useHistory} from 'react-router-dom';
+
 // Configuration for submarine's animation
 const Config = {friction: 5, tension: 120, mass: 140};
-function Life() {
+function Life(props) {
   // Custom hook for user's viewport
   const [ref, visible] = useOnScreen({rootMargin: '-100px'});
 
   //State for Astro-naut's rotation animation
   const [state, setState] = useState(false);
+
+  //History variable
+  let history = useHistory();
 
   // Animations
   const anim = useSpring({
@@ -23,19 +29,16 @@ function Life() {
       }
     },
     config: config.wobbly,
+    immediate: props.animation,
   });
   const anim2 = useSpring({
-    from: {opacity: 0, transfrom: 'translate(0deg)'},
-    to: async (next) => {
-      if (visible) {
-        await next({
-          opacity: 1,
-          transform: `rotate(
-            ${state ? 180 : 0}deg)`,
-        });
-      }
+    from: {transfrom: 'translate(0deg)'},
+    to: {
+      transform: `rotate(
+        ${state ? 180 : 0}deg)`,
     },
-    config: {friction: 5, tension: 120, mass: 140},
+    config: {friction: 20, tension: 120, mass: 140},
+    immediate: props.animation,
   });
   const anim3 = useSpring({
     from: {opacity: 0},
@@ -46,6 +49,8 @@ function Life() {
         });
       }
     },
+
+    immediate: props.animation,
   });
   const anim4 = useSpring({
     from: {transform: 'translate3d(0,20px,0)'},
@@ -56,8 +61,15 @@ function Life() {
         });
       }
     },
+    immediate: props.animation,
     config: Config,
   });
+
+  //Handling routing
+  const Route = () => {
+    history.push('/deep');
+  };
+
   return (
     <React.Fragment>
       <div ref={ref} className={classes.container}>
@@ -71,7 +83,10 @@ function Life() {
           species are waiting to be discovered in the other{' '}
           <span className={classes.Span}>95%</span> of the oceans.
         </animated.p>
-        <animated.div className={classes.imgContainer}>
+      </div>
+
+      <div className={classes.container2}>
+        <animated.div style={anim3} className={classes.imgContainer}>
           {' '}
           <animated.img
             style={anim2}
@@ -82,25 +97,27 @@ function Life() {
             src={img}
             alt='Astro-naut'
           />
-          <animated.p style={anim3}>
+          <animated.p className={classes.paragraph} style={anim3}>
             It is exciting to think about all the species and places we might
             discover.
           </animated.p>
-          <animated.a href='#' style={anim3} className={classes.link}>
+          <animated.span onClick={Route} style={anim3} className={classes.link}>
             {' '}
             So Let's dive in!{' '}
-          </animated.a>
+          </animated.span>
         </animated.div>
-
         <animated.img
           style={anim4}
           className={classes.submarine}
           src={img2}
           alt='Submarine'
-        />
+        />{' '}
       </div>
     </React.Fragment>
   );
 }
 
 export default Life;
+/**
+
+ */

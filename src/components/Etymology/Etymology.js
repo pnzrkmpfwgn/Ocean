@@ -3,11 +3,11 @@ import {useSpring, animated, config} from 'react-spring';
 import useOnScreen from '../../utils/useOnScreen';
 import classes from './Etymology.module.css';
 import img from '../../Assets/Book.png';
-function Etymology() {
+function Etymology(props) {
   const [ref, visible] = useOnScreen({rootMargin: '-100px'});
 
   const anim1 = useSpring({
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (visible) {
         await next({opacity: 1});
       }
@@ -15,9 +15,10 @@ function Etymology() {
     from: {opacity: 0},
     delay: 900,
     config: {duration: 1500},
+    immediate: props.animation,
   });
   const anim2 = useSpring({
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (visible) {
         await next({opacity: 1, transform: 'translate3d(0,0px,0)'});
       }
@@ -25,9 +26,10 @@ function Etymology() {
     from: {opacity: 0, transform: 'translate3d(0,30px,0)'},
     delay: 1100,
     config: config.slow,
+    immediate: props.animation,
   });
   const anim3 = useSpring({
-    to: async (next, cancel) => {
+    to: async (next) => {
       if (visible) {
         await next({opacity: 1, transform: 'translate3d(0,0px,0)'});
       }
@@ -35,6 +37,7 @@ function Etymology() {
     from: {opacity: 0, transform: 'translate3d(0,30px,0)'},
     delay: 1300,
     config: config.slow,
+    immediate: props.animation,
   });
   let section = (
     <React.Fragment>
@@ -64,7 +67,6 @@ function Etymology() {
     </React.Fragment>
   );
 
-  //return visible ? section : null;
   return section;
 }
 export default Etymology;

@@ -15,11 +15,12 @@
   align-items: center;
   font-style: italic;
 }
-.btn1,
-.btn2 {
+
+.Link {
   border: 5px solid rgb(8, 57, 90);
   background-color: rgb(8, 57, 90);
   color: rgb(20, 164, 231);
+  cursor: pointer;
   width: 50%;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -27,8 +28,8 @@
   text-align: center;
   transition: all ease-in-out 0.3s;
 }
-.btn1:hover,
-.btn2:hover {
+
+.Link:hover {
   background-color: rgb(20, 164, 231);
   color: rgb(8, 57, 90);
   width: 52%;
@@ -41,4 +42,16 @@
   margin: 18px;
   font-size: 23px;
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .Link {
+    width: 20%;
+  }
+  .Link:hover {
+    width: 22%;
+  }
+  .heading2 {
+    font-size: 28px;
+  }
 }

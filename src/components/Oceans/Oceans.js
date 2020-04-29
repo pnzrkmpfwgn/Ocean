@@ -11,7 +11,7 @@ const items = [
   'Arctic Ocean',
 ];
 
-function Oceans() {
+function Oceans(props) {
   const [ref, visible] = useOnScreen({rootMargin: '-100px'});
   const anim = useSpring({
     to: async (next, cancel) => {
@@ -22,6 +22,7 @@ function Oceans() {
     from: {opacity: 0, transform: 'translate3d(0,30px,0)'},
     delay: 500,
     config: config.slow,
+    immediate: props.animation,
   });
   return (
     <div className={classes.container} style={{height: '70vh'}} ref={ref}>
