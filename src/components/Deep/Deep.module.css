@@ -233,13 +233,230 @@
 }
 
 /* Responisveness for desktop */
-@media (min-width: 1024px) {
+
+@media (min-width: 1920px) and (max-width: 4096px) {
   .background {
     background-image: linear-gradient(
       rgba(61, 182, 253, 0.5) 250px,
-      rgba(0, 0, 0) 5000px
+      rgba(0, 0, 0) 7000px
     );
-    height: 9510px;
+    height: 13000px;
+  }
+
+  .Level1,
+  .Level2,
+  .Level3,
+  .Level4,
+  .Level5 {
+    width: 80%;
+    margin-right: 25px;
+  }
+  .P {
+    font-size: 40px;
+  }
+  .H3 {
+    font-size: 42px;
+  }
+  .H3_light {
+    font-size: 40px;
+  }
+  .P_light {
+    font-size: 35px;
+  }
+  .Ps_light {
+    font-size: 50px;
+  }
+  .P_light_S {
+    font-size: 40px;
+  }
+  .H3_light_S {
+    font-size: 40px;
+  }
+
+  .btn1 {
+    font-size: 40px;
+    margin-left: 150px;
+  }
+  .btn1:hover {
+    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+      #2dd5ff 0px 0px 20px, #2dd5ff 0px 0px 30px, #2dd5ff 0px 0px 40px,
+      #2dd5ff 0px 0px 50px, #2dd5ff 0px 0px 75px;
+  }
+  .herd {
+    width: 22%;
+    height: 22%;
+    margin-left: 150px;
+  }
+  .fish2,
+  .fish5,
+  .fish1 {
+    margin-left: 10px;
+    height: 5%;
+    width: 5%;
+  }
+  .fish3 {
+    height: 15%;
+    width: 15%;
+  }
+  .fish4 {
+    height: 13%;
+    width: 13%;
+  }
+  .fish6 {
+    height: 16%;
+    width: 16%;
+  }
+  .anglerfish {
+    margin-top: 75px;
+    margin-left: 150px;
+    width: 15%;
+    height: 15%;
+    -webkit-filter: drop-shadow(-20px -20px 20px #fff);
+    filter: drop-shadow(-20px -20px 20px #fff);
+  }
+
+  .dolphin {
+    margin-top: 75px;
+    margin-left: 50px;
+    width: 30%;
+    height: 30%;
+  }
+  .shark,
+  .swordfish {
+    margin-left: 50px;
+    width: 60%;
+    height: 60%;
+  }
+  .whale {
+    width: 70%;
+    height: 70%;
+  }
+
+  .ctuhullu {
+    width: 50%;
+    height: 50%;
+    margin-left: 150px;
+  }
+  .container1 {
+    margin-left: 75px;
+  }
+  .submarineFeatures {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .background {
+    height: 9800px;
+  }
+
+  .Level1,
+  .Level2,
+  .Level3,
+  .Level4,
+  .Level5 {
+    width: 75%;
+    margin-right: 25px;
+  }
+  .P {
+    font-size: 32px;
+  }
+  .H3 {
+    font-size: 35px;
+  }
+  .H3_light {
+    font-size: 32px;
+  }
+  .Ps_light,
+  .P_light {
+    font-size: 30px;
+  }
+  .P_light_S {
+    font-size: 25px;
+  }
+  .H3_light_S {
+    font-size: 32px;
+  }
+
+  .btn1 {
+    font-size: 30px;
+    margin-left: 150px;
+  }
+  .btn1:hover {
+    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+      #2dd5ff 0px 0px 20px, #2dd5ff 0px 0px 30px, #2dd5ff 0px 0px 40px,
+      #2dd5ff 0px 0px 50px, #2dd5ff 0px 0px 75px;
+  }
+  .herd {
+    width: 22%;
+    height: 22%;
+    margin-left: 150px;
+  }
+  .fish2,
+  .fish5,
+  .fish1 {
+    margin-left: 10px;
+    height: 5%;
+    width: 5%;
+  }
+  .fish3 {
+    height: 15%;
+    width: 15%;
+  }
+  .fish4 {
+    height: 13%;
+    width: 13%;
+  }
+  .fish6 {
+    height: 16%;
+    width: 16%;
+  }
+  .anglerfish {
+    margin-top: 75px;
+    margin-left: 150px;
+    width: 15%;
+    height: 15%;
+    -webkit-filter: drop-shadow(-20px -20px 20px #fff);
+    filter: drop-shadow(-20px -20px 20px #fff);
+  }
+
+  .dolphin {
+    margin-top: 75px;
+    margin-left: 50px;
+    width: 30%;
+    height: 30%;
+  }
+  .shark,
+  .swordfish {
+    margin-left: 50px;
+    width: 60%;
+    height: 60%;
+  }
+  .whale {
+    width: 70%;
+    height: 70%;
+  }
+
+  .ctuhullu {
+    width: 50%;
+    height: 50%;
+    margin-left: 150px;
+  }
+  .container1 {
+    margin-left: 75px;
+  }
+  .submarineFeatures {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .background {
+    height: 9600px;
   }
 
   .Level1,
@@ -345,7 +562,7 @@
 }
 
 /* Responsiveness for tablets */
-@media (min-width: 433px) {
+@media (min-width: 433px) and (max-width: 1023px) {
   .background {
     padding-right: 90px;
     height: 7800px;
