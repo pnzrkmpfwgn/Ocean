@@ -96,7 +96,7 @@ function ContentsLinks() {
             Anglerfish
           </a>
         </div>
-        <p className={classes.sub_heading}> Image Sources: </p>
+        <p className={classes.sub_heading}> Submarine paralax: </p>
         <div className={classes.links_container}>
           <a
             className={classes.link}
